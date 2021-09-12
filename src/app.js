@@ -11,6 +11,7 @@ const weatherDirectory = path.join(__dirname,'utils/forecast.js')
 
 const forecast = require(weatherDirectory)
 
+const port = process.env.PORT || 3000
 
 app.use(express.static(publicDirectoryPath))
 
@@ -78,6 +79,6 @@ app.get('*',(req,res)=>{
         errormsg: 'Page not found'
     })
 })
-app.listen(3000, () => {
- console.log('Server is up on port 3000.')
+app.listen(port, () => {
+ console.log('Server is up on port'+port)
 })
