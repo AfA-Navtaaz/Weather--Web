@@ -23,8 +23,8 @@ weatherForm.addEventListener('submit',(e)=> {
         messageOne.textContent = data.message
     }
     else{
-        messageOne.textContent = data.name
-        messageTwo.textContent = data.main.temp
+        messageOne.textContent = data.name +', ' + data.sys.country
+        messageTwo.textContent = 'Overview ' + data.weather[0].description +', Current temperature is '+ data.main.temp + ' Celcius, And it feels like ' + data.main.feels_like +' Celscius'
     }
 })
 })
