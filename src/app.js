@@ -49,7 +49,7 @@ app.get('/weather', (req, res) => {
       })
   }
     
-  forecast(req.query.search, (error, {forecastData} = {}) => {
+  forecast(req.query.search, (error, forecastData) => {
     if (error) {
         return res.send({error})
     }
